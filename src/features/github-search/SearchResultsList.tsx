@@ -2,11 +2,31 @@ import { Alert, Box, CircularProgress, List, TextField } from "@mui/material";
 import { Spinner } from "../../components/Spinner";
 
 import { useGithubSearch } from "../../hooks/useGithubSearch";
-import { Pagination } from "./Pagination";
+import { Pagination } from "../../components/Pagination";
 import { SearchResultItem } from "./SearchResultItem";
+import { useRouter } from "next/router";
 
 export const SearchResultsList = () => {
   const { data, pagination, error, isLoading } = useGithubSearch();
+  const router = useRouter();
+
+  const handleNextPage = () => {
+    router.push({
+      query: {
+        search: router.query.search,
+        after: pagination?.endCursor,
+      },
+    });
+  };
+
+  const handlePreviousPage = () => {
+    router.push({
+      query: {
+        search: router.query.search,
+        before: pagination?.startCursor,
+      },
+    });
+  };
 
   if (isLoading) {
     return (
@@ -40,7 +60,11 @@ export const SearchResultsList = () => {
         })}
       </List>
       <Box sx={{ mt: 2, mb: 4, display: "flex", justifyContent: "flex-end" }}>
-        <Pagination pagination={pagination} />
+        <Pagination
+          pagination={pagination}
+          handlePreviousPage={handlePreviousPage}
+          handleNextPage={handleNextPage}
+        />
       </Box>
     </>
   );
