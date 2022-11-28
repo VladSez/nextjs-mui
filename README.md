@@ -18,7 +18,7 @@ pnpm install
 pnpm dev
 ```
 
-You have to provide your own `NEXT_PUBLIC_API_GITHUB_TOKEN` and put it in `.env.local` file.
+You have to provide your own `NEXT_PUBLIC_API_GITHUB_TOKEN` and put it in `.env.local` file to run the application locally.
 
 ## How to run e2e tests
 
@@ -31,8 +31,6 @@ or
 ```sh
 pnpm test:e2e
 ```
-
-## We use [Act](https://github.com/nektos/act) to test github actions locally
 
 ## The idea behind the example
 
