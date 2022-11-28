@@ -2,6 +2,10 @@
 
 https://github.com/mui/material-ui/tree/master/examples/nextjs-with-typescript
 
+## Deployed example
+
+https://nextjs-mui-nu.vercel.app/
+
 ## How to use
 
 Install it and run:
