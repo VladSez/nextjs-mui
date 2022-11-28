@@ -11,6 +11,7 @@ specifiers:
   '@playwright/test': 1.28.1
   '@types/node': latest
   '@types/react': latest
+  clsx: 1.2.1
   eslint: latest
   eslint-config-next: latest
   eslint-config-prettier: 8.5.0
@@ -30,6 +31,7 @@ dependencies:
   '@mui/icons-material': 5.10.15_oev7u2jo7ua7d3mgxqd6sscfw4
   '@mui/material': 5.10.15_thp4wrxo45nyllusrnt46mid4u
   '@next/font': 13.0.5
+  clsx: 1.2.1
   graphql-request: 5.0.0
   next: 13.0.5_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0

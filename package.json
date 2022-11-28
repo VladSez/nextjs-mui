@@ -6,7 +6,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "e2e-test": "npx playwright test"
+    "test:e2e": "npx playwright test",
+    "test:github-action": "act --secret-file .env.test.local",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
     "@emotion/cache": "latest",
@@ -16,6 +18,7 @@
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
     "@next/font": "latest",
+    "clsx": "1.2.1",
     "graphql-request": "5.0.0",
     "next": "latest",
     "react": "latest",
