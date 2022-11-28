@@ -7,7 +7,6 @@
     "start": "next start",
     "lint": "next lint",
     "test:e2e": "npx playwright test",
-    "test:github-action": "act --secret-file .env.test.local",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
