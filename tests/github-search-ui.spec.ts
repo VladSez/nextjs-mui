@@ -1,7 +1,5 @@
 import { test, expect } from "@playwright/test";
 
-test.describe.configure({ mode: "parallel" });
-
 test.describe("github search ui works", () => {
   test.beforeEach(async ({ page }, testInfo) => {
     console.log(`Running ${testInfo.title}`);
